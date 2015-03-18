@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <ul>
+    	
+    	<form action='/add/submit/' method="post">
+		  <div class="form-group">
+		    <label for="pagetitle">PAGE TITLE</label>
+		    <input type="text" name="title" class="form-control" id="pagetitle">
+		  </div>
+		  <div class="form-group">
+		    <label for="pagecontent">PAGE CONTENT</label>
+		    <textarea class="field span12 form-control" id="pagecontent" rows="12" name="pagecontent"></textarea>
+		  </div>
+		  <div class="form-group">
+		    <label for="tags">TAGS</label>
+		    <input type="text" name="tags" class="form-control" id="tags">
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+
+    </ul>
+{% endblock %}

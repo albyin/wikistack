@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    	
+    {{doc.body|marked_text}}
+    <hr>
+    tags: {{doc.tags.join(", ")}}
+
+{% endblock %}

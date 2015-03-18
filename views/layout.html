@@ -1,0 +1,54 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}WikiStack{% endblock %}</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <nav class="navbar navbar-inverse navbar-top" style="border-radius: 0 !important">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">WIKISTACK</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/add/">ADD PAGE</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    	<h1>{{title}}</h1>
+    <hr>
+   {% block content %}{% endblock %}
+	 </div>
+
+	<footer class="footer">
+
+    <ul>
+      
+      <form action='/tags/search' method="get">
+      <div class="form-group">
+        <label for="tagQuery">TAG SEARCH</label>
+        <input type="text" name="tagQuery" class="form-control" id="tagQuery">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    </ul>
+
+
+      <div class="container">
+      	<hr>
+        <p class="text-muted">WikiStack, Fullstack Academy</p>
+      </div>
+    </footer>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>
